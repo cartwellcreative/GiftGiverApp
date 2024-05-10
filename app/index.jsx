@@ -1,15 +1,99 @@
-import {  Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import React from 'react';
-import { Link } from 'expo-router';
+import { StyleSheet, Image } from 'react-native';
+import { mainBackground, greenText, brownText } from '../styles/color';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Ionicons } from '@expo/vector-icons';
+import CustomButton from '../components/CustomButton';
+import { images } from "../constants";
 import { StatusBar } from 'expo-status-bar';
 
+
+
 export default function App() {
+
     return (
-        <View className="flex-1 items-center justify-center bg-white">
-        <Text className="text-3xl font-pblack">Gift Giver App</Text>
-        <StatusBar style="auto" />
-        <Link href="/home" style={{color: 'blue'}}>Go to Home</Link>
-        </View>
+        <SafeAreaView classname="bg-primary h-full" style={styles.container}>
+            <ScrollView contentContainerStyle={{ height: '100%' }}>
+                <View>
+                    <View style={styles.page}>
+                        <View style={styles.logo}>
+                            <Ionicons name="gift-sharp" size={30} color={greenText} />
+                            <Text>
+                                <Text style={styles.logoText}>Present</Text>
+                            </Text>
+                        </View>
+                        <View className="relative mt-5">
+                            <Text style={styles.centerText}>
+                                Gift Giving Made{"\n"}
+                                Easy with{" "}
+                                <Text style={{ color: greenText }}>Present</Text>
+                            </Text>
+                                <Image
+                                    source={images.path}
+                                    className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
+                                    resizeMode="contain"
+                                />
+                            
+                        </View>
+
+                        <Text style={styles.tagText}>
+                            All of your gift ideas in{"\n"}one convienient place.
+                        </Text>
+
+                        <CustomButton title="Sign Up or Login" handlePress={()=> router.push('/sign-in')}/>
+                    </View>
+                </View>
+            </ScrollView>
+
+            <StatusBar backgroundColor='#161622' style="light" />
+
+        </SafeAreaView>
     );
-    
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: mainBackground,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    page: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    logo: {
+        marginTop: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    logoText: {
+        color: greenText,
+        fontSize: 30,
+        fontWeight: 'bold',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    centerText: {
+        color: brownText,
+        fontSize: 40,
+        fontWeight: 'bold',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 150,
+    },
+    tagText: {
+        color: greenText,
+        fontSize: 20,
+        fontStyle: 'italic',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+        marginBottom: 20,
+    },
+});

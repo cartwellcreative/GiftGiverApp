@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
+import { mainBackground } from '../styles/color';
 
 SplashScreen.preventAutoHideAsync(); // prevent the splash screen from hiding before asset loading is complete
 
