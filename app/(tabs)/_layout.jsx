@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import React from 'react';
 import { Tabs, Redirect } from 'expo-router';
-import { icons } from '../../constants/icons'
+import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome6 } from '@expo/vector-icons';
+
 
 //want to bring this into it's own layout because these screens will not have the navigation bar that the others do
 
@@ -27,7 +29,7 @@ const TabsLayout = () => {
     <>
       <Tabs
         screenOptions={{
-          tabBarShowLabel: false,
+          tabBarShowLabel: true,
         }}>
         <Tabs.Screen
           name="home"
@@ -35,35 +37,44 @@ const TabsLayout = () => {
             title: 'Home',
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.home} color={color} name="Home" focused={focused} />
+              <Ionicons name="home" size={24} color="black" />
             )
           }} />
         <Tabs.Screen
-          name="bookmark"
+          name="shop"
           options={{
-            title: 'Bookmark',
+            title: 'Shop',
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.bookmark} color={color} name="Bookmark" focused={focused} />
+              <FontAwesome6 name="cart-shopping" size={24} color="black" />
             )
           }}
         />
         <Tabs.Screen
-          name="create"
+          name="planner"
           options={{
-            title: 'Create',
+            title: 'Planner',
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.create} color={color} name="Create" focused={focused} />
+              <FontAwesome6 name="list-check" size={24} color="black" />
             )
           }} />
         <Tabs.Screen
-          name="profile"
+          name="my_lists"
           options={{
-            title: 'Profile',
+            title: 'My Lists',
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.profile} color={color} name="Profile" focused={focused} />
+              <FontAwesome6 name="list" size={24} color="black" />
+            )
+          }} />
+           <Tabs.Screen
+          name="more"
+          options={{
+            title: 'More',
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <FontAwesome6 name="ellipsis" size={24} color="black" />
             )
           }} />
       </Tabs>
@@ -73,4 +84,3 @@ const TabsLayout = () => {
 
 export default TabsLayout
 
-const styles = StyleSheet.create({})
