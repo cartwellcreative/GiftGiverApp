@@ -7,13 +7,15 @@ import { Ionicons } from '@expo/vector-icons';
 import CustomButton from '../components/CustomButton';
 import { images } from "../constants";
 import { StatusBar } from 'expo-status-bar';
+import { router } from 'expo-router';
+
 
 
 
 export default function App() {
 
     return (
-        <SafeAreaView classname="bg-primary h-full" style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <ScrollView contentContainerStyle={{ height: '100%' }}>
                 <View>
                     <View style={styles.page}>
@@ -31,7 +33,7 @@ export default function App() {
                             </Text>
                                 <Image
                                     source={images.path}
-                                    className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
+                                    className="w-[145px] h-[15px] absolute -bottom-2 -right-1"
                                     resizeMode="contain"
                                 />
                             
