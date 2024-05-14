@@ -7,10 +7,10 @@ const globalColor = {
 
 // main
 export const mainBackground = globalColor.cream;
-export const brownText = globalColor.brown;
-export const greenText = globalColor.green;
-export const tanText = globalColor.tan;
-export const creamText = globalColor.cream;
+export const brown = globalColor.brown;
+export const green = globalColor.green;
+export const tan = globalColor.tan;
+export const cream = globalColor.cream;
 
 
 
