@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { brownText, creamText } from '../styles/color'
+import { brown, cream } from '../styles/color'
 
 const CustomButton = ({title, handlePress, containerStyles, textStyles, isloading}) => {
   return (
@@ -19,15 +19,16 @@ export default CustomButton
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: brownText,
+    backgroundColor: brown,
     padding: 10,
     borderRadius: 5,
-    width: '100%',
+    width: '90%',
     alignItems: 'center', 
     justifyContent: 'center',
+    marginTop: 20,
   },
   text: {
-    color: creamText,
+    color: cream,
     fontSize: 16,
     fontWeight: 'bold',
   }

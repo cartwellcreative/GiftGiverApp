@@ -1,7 +1,7 @@
 import { ScrollView, Text, View } from 'react-native';
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { mainBackground, greenText, brownText } from '../styles/color';
+import { mainBackground, green, brown } from '../styles/color';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import CustomButton from '../components/CustomButton';
@@ -20,7 +20,7 @@ export default function App() {
                 <View>
                     <View style={styles.page}>
                         <View style={styles.logo}>
-                            <Ionicons name="gift-sharp" size={30} color={greenText} />
+                            <Ionicons name="gift-sharp" size={30} color={green} />
                             <Text>
                                 <Text style={styles.logoText}>Present</Text>
                             </Text>
@@ -29,7 +29,7 @@ export default function App() {
                             <Text style={styles.centerText}>
                                 Gift Giving Made{"\n"}
                                 Easy with{" "}
-                                <Text style={{ color: greenText }}>Present</Text>
+                                <Text style={{ color: green }}>Present</Text>
                             </Text>
                                 <Image
                                     source={images.path}
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logoText: {
-        color: greenText,
+        color: green,
         fontSize: 30,
         fontWeight: 'bold',
         flexDirection: 'row',
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     centerText: {
-        color: brownText,
+        color: brown,
         fontSize: 40,
         fontWeight: 'bold',
         flexDirection: 'row',
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         marginTop: 150,
     },
     tagText: {
-        color: greenText,
+        color: green,
         fontSize: 20,
         fontStyle: 'italic',
         flexDirection: 'row',

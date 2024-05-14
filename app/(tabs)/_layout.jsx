@@ -1,9 +1,8 @@
-import { Text, View } from 'react-native';
 import React from 'react';
-import { Tabs, Redirect } from 'expo-router';
+import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
-import { mainBackground, navBarActiveIconColor, navBarBackground, navBarBackgrounf, navBarInactiveIconColor } from '../../styles/color';
+import { navBarActiveIconColor, navBarBackground, navBarBackgrounf, navBarInactiveIconColor } from '../../styles/color';
 
 
 //want to bring this into it's own layout because these screens will not have the navigation bar that the others do
